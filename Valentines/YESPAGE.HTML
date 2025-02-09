@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes!</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #FFE4E1;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #FF69B4;
+        }
+        .plans-container {
+            display: none; /* Initially hidden */
+            text-align: center;
+            margin-top: 20px;
+        }
+        .movie-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px auto;
+        }
+        .movie-image {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            display: none; /* Initially hidden */
+        }
+        .side-image {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .back-button, .plans-button {
+            margin-top: 40px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #FF69B4;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .back-button:hover, .plans-button:hover {
+            background-color: #FF1493;
+        }
+        .plan-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .plan-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .plan-item video {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎥 Our Plans? ❤️</h1>
+    <button class="plans-button" onclick="showPlans()">Click to see Deadly Plans</button>
+    
+    <div id="plans-container" class="plans-container">
+        <audio id="background-music" autoplay loop>
+            <source src="Corazon-Sin-Cara.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="movie-section">
+           
+            <img src="across-the-uni.jpg" alt="Across the Universe Movie Poster" class="movie-image">
+            
+        </div>
+        
+        <div class="plan-items">
+            <div class="plan-item">
+                <p>📞 We Call</p>
+                <video autoplay loop muted playsinline>
+                    <source src="facetime-cat.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <div class="plan-item">
+                <p>🔥 We Blaze</p>
+                <video autoplay loop muted playsinline>
+                    <source src="blaze.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <div class="plan-item">
+                <p>🍹 We Drink</p>
+                <video autoplay loop muted playsinline>
+                    <source src="jink-doe.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <div class="plan-item">
+                <p>💖 We Fall in Love</p>
+                <video autoplay loop muted playsinline>
+                    <source src="breakdance-moves.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        
+        <button class="back-button" onclick="location.href='index.html'">Back to Main Page</button>
+    </div>
+
+    <script>
+        function showPlans() {
+            document.getElementById("plans-container").style.display = "block";
+            document.querySelector(".movie-image").style.display = "block";
+            document.getElementById("background-music").play();
+        }
+    </script>
+</body>
+</html>
